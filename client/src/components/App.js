@@ -1,6 +1,7 @@
 import React from "react";
 import Routes from "./Routes";
 import AlbumHeader from "./shared/AlbumHeader";
+import Intro from "./shared/Intro";
 import Nav from "./shared/Nav";
 import Player from "./shared/Player";
 import Timeline from "./shared/Timeline";
@@ -10,8 +11,9 @@ function App() {
     <React.Fragment>
       <Nav />
       <Routes />
-      <AlbumHeader />
+      <Intro />
       <Timeline />
+      <AlbumHeader />
   <Player />
     </React.Fragment>
   );

@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import Axios from "axios";
 import "react-vertical-timeline-component/style.min.css";
-
-import events from "./events.json";
-
 import "./timeline.css";
 
 function Timeline() {
+    const [shows, setShows] = useState([]);
+  
+    useEffect(() => {
+      (async () => {
+        await getShows();
+      })();
+    }, []);
+  
+    const getShows = async () => {
+      const showsResp = await Axios.get("./api/shows");
+      if (showsResp.status === 200) setShows(showsResp.data);
+    };
+  
+
   return (
     <div
       className="App"
       style={{ background: "white", fontFamily: "Trebuchet Ms" }}
     >
-      <h1 className="centerText">DATES</h1>
+      <h1 className="centerText">SHOWS</h1>
       <VerticalTimeline>
-        {events.map(event => (
+        {shows.map(show => (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             
@@ -22,19 +34,23 @@ function Timeline() {
           >
             <h2
               className="vertical-timeline-element-title"
-              dangerouslySetInnerHTML={{ __html: event.event }}
+              dangerouslySetInnerHTML={{ __html: show.showTitle }}
             />
              <h3
               className="vertical-timeline-element-title"
-              dangerouslySetInnerHTML={{ __html: event.location }}
+              dangerouslySetInnerHTML={{ __html: show.showLocation }}
             />
              <h5
               className="vertical-timeline-element-title"
-              dangerouslySetInnerHTML={{ __html: event.date }}
+              dangerouslySetInnerHTML={{ __html: show.date }}
             />
              <h5
               className="vertical-timeline-element-title"
-              dangerouslySetInnerHTML={{ __html: event.time }}
+              dangerouslySetInnerHTML={{ __html: show.showTime }}
+            />
+            <h5
+              className="vertical-timeline-element-title"
+              dangerouslySetInnerHTML={{ __html: show.showInformation }}
             />
           </VerticalTimelineElement>
         ))}
