@@ -1,0 +1,25 @@
+@import "../app.css";
+
+.menuFont {
+  font-family: "Poiret One", cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menuColor {
+  background-color: rgba(241, 66, 212, 0.3);
+  text-decoration-color: black;
+}
+
+.popupTitle {
+  font-family: "Poiret One", cursive;
+  font-size: 58px;
+  font-weight: bold;
+  padding-top: 200px;
+}
+
+p {
+  font-family: "Poiret One", cursive;
+  font-size: 22px;
+  font-weight: bold;
+}
