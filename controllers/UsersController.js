@@ -1,5 +1,5 @@
-const User = require('../models/user');
-const { loginUser } = require('./SessionsController');
+const User = require("../models/user");
+const { loginUser } = require("./SessionsController");
 
 exports.create = async (req, res) => {
   try {
@@ -9,6 +9,9 @@ exports.create = async (req, res) => {
     return loginUser(user, req, res);
   } catch (error) {
     console.error(error);
-    res.status(400).json({message: 'There was an issue while registering the user.', error});
+    res.status(400).json({
+      message: "There was an issue while registering the user.",
+      error,
+    });
   }
 };
