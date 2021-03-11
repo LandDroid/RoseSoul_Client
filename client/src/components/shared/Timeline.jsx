@@ -5,7 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import Axios from "axios";
 import "react-vertical-timeline-component/style.min.css";
-import "./timeline.css";
+import "./normalized.css";
 
 function Timeline() {
   const [shows, setShows] = useState([]);

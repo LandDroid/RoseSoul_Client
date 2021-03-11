@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBMask, MDBView } from "mdbreact";
-import "./nav.css";
+import "./normalized.css";
 
 class MainImage extends React.Component {
   constructor(props) {

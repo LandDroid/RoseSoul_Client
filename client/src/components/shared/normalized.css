@@ -1,9 +1,46 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+.titleCenter {
+  text-align: center;
+  color: #e74c3c;
+  font-family: "Poiret One", cursive;
+}
+
+.centerText {
+  text-align: center;
+  font-family: "Poiret One", cursive;
+  font-size: 38px;
+  font-weight: bold;
+}
 
 .d-block w-100 {
   width: 800px;
   height: 400px;
 }
+
+.menuFont {
+  font-family: "Poiret One", cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menuColor {
+  background-color: rgba(241, 66, 212, 0.3);
+  text-decoration-color: black;
+}
+
+.popupTitle {
+  font-family: "Poiret One", cursive;
+  font-size: 58px;
+  font-weight: bold;
+  padding-top: 200px;
+}
+
+p {
+  font-family: "Poiret One", cursive;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 /* Document
        ========================================================================== */
 

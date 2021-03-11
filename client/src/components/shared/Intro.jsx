@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBContainer } from "mdbreact";
-import "./albumHeader.css";
+import "./normalized.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const Intro = () => {

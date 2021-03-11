@@ -8,7 +8,6 @@ import {
   MDBNavLink,
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./nav.css";
 import "./normalized.css";
 
 class Nav extends React.Component {
